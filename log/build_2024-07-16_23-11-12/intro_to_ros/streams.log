@@ -1,0 +1,57 @@
+[8.165s] Invoking command in '/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros': PYTHONPATH=/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build
+[11.336s] running develop
+[11.337s] /usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[11.344s] !!
+[11.346s] 
+[11.347s]         ********************************************************************************
+[11.348s]         Please avoid running ``setup.py`` and ``easy_install``.
+[11.350s]         Instead, use pypa/build, pypa/installer or other
+[11.351s]         standards-based tools.
+[11.352s] 
+[11.355s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[11.357s]         ********************************************************************************
+[11.362s] 
+[11.364s] !!
+[11.365s]   easy_install.initialize_options(self)
+[14.004s] Removing /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro-to-ros.egg-link (link to .)
+[14.296s] Invoked command in '/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros' returned '0': PYTHONPATH=/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build
+[14.304s] Invoking command in '/home/nhan/auvc_ws/src/intro_to_ros': PYTHONPATH=/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/intro_to_ros build --build-base /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build install --record /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/install.log --single-version-externally-managed install_data --force
+[18.117s] running egg_info
+[20.273s] writing build/intro_to_ros/intro_to_ros.egg-info/PKG-INFO
+[20.289s] writing dependency_links to build/intro_to_ros/intro_to_ros.egg-info/dependency_links.txt
+[20.301s] writing entry points to build/intro_to_ros/intro_to_ros.egg-info/entry_points.txt
+[20.303s] writing requirements to build/intro_to_ros/intro_to_ros.egg-info/requires.txt
+[20.318s] writing top-level names to build/intro_to_ros/intro_to_ros.egg-info/top_level.txt
+[22.361s] reading manifest file 'build/intro_to_ros/intro_to_ros.egg-info/SOURCES.txt'
+[22.410s] writing manifest file 'build/intro_to_ros/intro_to_ros.egg-info/SOURCES.txt'
+[22.428s] running build
+[22.450s] running build_py
+[22.464s] creating /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build
+[22.466s] creating /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib
+[22.489s] creating /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros
+[22.514s] copying intro_to_ros/publisher.py -> /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros
+[22.524s] copying intro_to_ros/bluerov2_sensors.py -> /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros
+[22.531s] copying intro_to_ros/subscriber.py -> /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros
+[22.554s] copying intro_to_ros/__init__.py -> /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros
+[22.565s] running install
+[22.726s] running install_lib
+[23.898s] creating /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros
+[23.902s] copying /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros/publisher.py -> /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros
+[23.907s] copying /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros/bluerov2_sensors.py -> /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros
+[23.914s] copying /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros/subscriber.py -> /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros
+[23.915s] copying /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build/lib/intro_to_ros/__init__.py -> /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros
+[23.916s] byte-compiling /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros/publisher.py to publisher.cpython-312.pyc
+[23.921s] byte-compiling /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros/bluerov2_sensors.py to bluerov2_sensors.cpython-312.pyc
+[23.925s] byte-compiling /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros/subscriber.py to subscriber.cpython-312.pyc
+[23.927s] byte-compiling /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros/__init__.py to __init__.cpython-312.pyc
+[23.934s] running install_data
+[23.934s] copying resource/intro_to_ros -> /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/share/ament_index/resource_index/packages
+[23.936s] copying package.xml -> /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/share/intro_to_ros
+[23.938s] running install_egg_info
+[24.287s] Copying build/intro_to_ros/intro_to_ros.egg-info to /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages/intro_to_ros-0.0.0-py3.12.egg-info
+[24.308s] running install_scripts
+[25.232s] Installing bluerov2_sensors script to /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/intro_to_ros
+[25.249s] Installing publisher script to /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/intro_to_ros
+[25.266s] Installing subscriber script to /home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/intro_to_ros
+[25.286s] writing list of installed files to '/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/install.log'
+[25.523s] Invoked command in '/home/nhan/auvc_ws/src/intro_to_ros' returned '0': PYTHONPATH=/home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nhan/auvc_ws/src/intro_to_ros/install/intro_to_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/intro_to_ros build --build-base /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/build install --record /home/nhan/auvc_ws/src/intro_to_ros/build/intro_to_ros/install.log --single-version-externally-managed install_data --force
