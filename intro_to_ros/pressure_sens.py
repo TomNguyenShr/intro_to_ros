@@ -2,41 +2,42 @@
 
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import Pose2D
+from mavros_msgs.msg import Altitude
 from sensor_msgs.msg import FluidPressure
 from rclpy.qos import QoSProfile, QoSHistoryPolicy, QoSReliabilityPolicy, QoSDurabilityPolicy
-import numpy as np
 
 class Pressure(Node):
     def __init__(self):
-        super().__init__("Status_Presure")
-        self.Static_Pressure = self.create_subscription(
+        self.rov_depth = 0.0
+        super().__init__("ROV_Pressure")
+        qos = QoSProfile(history=QoSHistoryPolicy.KEEP_LAST, depth=10, reliability=QoSReliabilityPolicy.RELIABLE, durability=QoSDurabilityPolicy.VOLATILE)
+        self.rovPressure = self.create_subscription(
             FluidPressure,
-            "/mavros/imu/static_pressure",
-            self.callback_static,
-            QoSProfile(
-            history=QoSHistoryPolicy.KEEP_LAST,
-            depth=10,
-            reliability=QoSReliabilityPolicy.BEST_EFFORT,
-            durability=QoSDurabilityPolicy.VOLATILE)
-        )
-        self.Diff_Pressure = self.create_subscription(
-            FluidPressure,
-            "/mavros/imu/diff_pressure",
-            self.callback_diff,
-            QoSProfile(
-            history=QoSHistoryPolicy.KEEP_LAST,
-            depth=10,
-            reliability=QoSReliabilityPolicy.BEST_EFFORT,
-            durability=QoSDurabilityPolicy.VOLATILE)
+            "/bluerov2/pressure",
+            self.callback_rov_pressure,
+            qos
         )
         self.get_logger().info("starting subscriber node")
-    def callback_static(self, msg):
-        self.Static_P = msg.fluid_pressure
-        self.get_logger().info(f"Static Pressure: {self.Static_P}")
-    def callback_diff(self, msg):
-        self.Diff_P = msg.fluid_pressure
-        self.get_logger().info(f"Static Pressure: {self.Diff_P}")
+
+        self.publisher = self.create_publisher(
+            Altitude,
+            "/bluerov2/depth",
+            qos
+        )
+        self.loop = self.create_timer(0.25, self.publish_depth)
+        self.get_logger().info("Depth Publisher Node started")
+        
+    def callback_rov_pressure(self, msg):
+        self.rov_pressure = msg.fluid_pressure
+        self.get_logger().info(f"Static Pressure: {self.rov_pressure}")
+        self.rov_depth = (self.rov_pressure-101325)/9.81/1000
+    
+    def publish_depth(self):
+        msg = Altitude()
+        msg.local = self.rov_depth
+        self.publisher.publish(msg)
+        self.get_logger().info(f"Depth:{self.rov_depth}")
+
 def main(args=None):
     rclpy.init(args=args)
     node = Pressure()
@@ -52,6 +53,3 @@ def main(args=None):
 
 if __name__=="__main__":
     main()
-    
-
-# ros2 topic pub /mavros/imu/static_pressure sensor_msgs/msg/FluidPressure

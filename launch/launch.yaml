@@ -1,0 +1,23 @@
+launch:
+
+- node:
+    pkg: "rosmav"
+    exec: "ros_bluerov2_interface"
+    name: "bluerov2_interface"
+    namespace: ""
+
+- node:
+    pkg: "intro_to_ros"
+    exec: "ROVV"
+    name: "ArmingDisarmingNode"
+    namespace: ""
+# - node:
+#     pkg: "intro_to_ros"
+#     exec: "pressure_sens"
+#     name: "PressureNode"
+#     namespace: "bluerov2"
+# - node:
+#     pkg: "intro_to_ros"
+#     exec: "Dancing"
+#     name: "DanceNode"
+#     namespace: "bluerov2"

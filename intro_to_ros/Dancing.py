@@ -81,9 +81,9 @@ class DanceNode(Node):
 
     def _dance_moves(self):
         self.get_logger().info(f"{self._step_counter}")
-        if self._step_counter < 1.1:
+        if self._step_counter < 60: #1.1
             # FORWARD 1.1 sec
-            self._move_forward = True
+            self._move_down = True
         elif self._step_counter < 2.2:
             # RIGHT 1.1 sec
             self._move_forward = False
@@ -113,7 +113,7 @@ class DanceNode(Node):
             self._light = True
             self._turn_right = True
 
-        if self._step_counter > 8.9:
+        if self._step_counter > 60: #8.9
             self._turn_right = False
             self._step_counter = 0
             self._run_counter += 1
